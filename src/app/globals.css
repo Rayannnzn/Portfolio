@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #080B11;
+  --color-surface: #0E131C;
+  --color-surface-2: #161D2A;
+  --color-line: #1F2937;
+  --color-signal: #B6FF3C;
+  --color-signal-dim: #6F8F2E;
+  --color-cyan-accent: #34E0E0;
+  --color-warn: #FF6B4A;
+}
+
+:root {
+  --ink:        #080B11;
+  --surface:    #0E131C;
+  --surface-2:  #161D2A;
+  --line:       #1F2937;
+  --text:       #E8EEF5;
+  --text-muted: #8492A6;
+  --signal:     #B6FF3C;
+  --signal-dim: #6F8F2E;
+  --cyan:       #34E0E0;
+  --warn:       #FF6B4A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), sans-serif;
+}
+
+code, .mono {
+  font-family: var(--font-mono), monospace;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* CTA buttons */
+.cta-primary {
+  background: var(--signal);
+  color: var(--ink);
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.cta-primary:hover {
+  background: var(--signal-dim);
+}
+.cta-primary:active {
+  transform: scale(0.98);
+}
+
+.cta-secondary {
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.cta-secondary:hover {
+  border-color: var(--signal-dim);
+  color: var(--text);
+}
+
+/* Tech stack tags */
+.tech-tag {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  border-radius: 2px;
+  display: inline-block;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  cursor: default;
+}
+.tech-tag:hover {
+  border-color: var(--signal-dim);
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+/* Nav link hover — signal underline draws in */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--signal);
+  transition: width 0.2s ease-out;
+}
+.nav-link:hover {
+  color: var(--text) !important;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Anchor offset — clears the fixed nav on scroll-jump */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Skip-to-content — visible only on focus */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding: 0.75rem 1.5rem;
+  background: var(--signal);
+  color: var(--ink);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Active role dot pulse */
+@keyframes pulse-signal {
+  0%, 100% { box-shadow: 0 0 6px 0px rgba(182, 255, 60, 0.35); }
+  50%       { box-shadow: 0 0 14px 4px rgba(182, 255, 60, 0.55); }
+}
+.dot-pulse {
+  animation: pulse-signal 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .dot-pulse { animation: none !important; }
+}

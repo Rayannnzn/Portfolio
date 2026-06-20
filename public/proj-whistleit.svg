@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6Z" fill="#B6FF3C"/></marker>
+    <marker id="b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6Z" fill="#34E0E0"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0E131C"/><stop offset="100%" stop-color="#161D2A"/></linearGradient>
+  </defs>
+  <rect width="800" height="130" fill="url(#bg)"/>
+  <g stroke="#1F2937" stroke-width="0.4" opacity="0.5">
+    <line x1="0" y1="43" x2="800" y2="43"/><line x1="0" y1="86" x2="800" y2="86"/>
+    <line x1="160" y1="0" x2="160" y2="130"/><line x1="320" y1="0" x2="320" y2="130"/>
+    <line x1="480" y1="0" x2="480" y2="130"/><line x1="640" y1="0" x2="640" y2="130"/>
+  </g>
+
+  <!-- Workspace A -->
+  <rect x="14" y="18" width="100" height="34" rx="3" fill="#161D2A" stroke="#B6FF3C" stroke-width="1"/>
+  <text x="64" y="32" fill="#B6FF3C" font-family="monospace" font-size="8" text-anchor="middle">WORKSPACE A</text>
+  <text x="64" y="44" fill="#8492A6" font-family="monospace" font-size="7" text-anchor="middle">Team channels</text>
+
+  <!-- Workspace B -->
+  <rect x="14" y="62" width="100" height="34" rx="3" fill="#161D2A" stroke="#B6FF3C" stroke-width="1"/>
+  <text x="64" y="76" fill="#B6FF3C" font-family="monospace" font-size="8" text-anchor="middle">WORKSPACE B</text>
+  <text x="64" y="88" fill="#8492A6" font-family="monospace" font-size="7" text-anchor="middle">Team channels</text>
+
+  <!-- arrows into platform -->
+  <line x1="114" y1="35" x2="162" y2="55" stroke="#B6FF3C" stroke-width="1.2" marker-end="url(#a)"/>
+  <line x1="114" y1="79" x2="162" y2="68" stroke="#B6FF3C" stroke-width="1.2" marker-end="url(#a)"/>
+
+  <!-- WhistleIt core platform -->
+  <rect x="164" y="28" width="140" height="72" rx="3" fill="#B6FF3C"/>
+  <text x="234" y="56" fill="#080B11" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">WHISTLEIT</text>
+  <text x="234" y="70" fill="#080B11" font-family="monospace" font-size="9" text-anchor="middle">Collaboration</text>
+  <text x="234" y="83" fill="#6F8F2E" font-family="monospace" font-size="8" text-anchor="middle">REST APIs</text>
+
+  <!-- message retrieval arrow (highlighted) -->
+  <line x1="304" y1="55" x2="344" y2="40" stroke="#B6FF3C" stroke-width="1.5" marker-end="url(#a)"/>
+  <!-- other modules arrow -->
+  <line x1="304" y1="72" x2="344" y2="88" stroke="#34E0E0" stroke-width="1.2" marker-end="url(#b)"/>
+
+  <!-- Message Retrieval Module -->
+  <rect x="346" y="22" width="150" height="36" rx="3" fill="#161D2A" stroke="#B6FF3C" stroke-width="1.5"/>
+  <text x="421" y="36" fill="#B6FF3C" font-family="monospace" font-size="8.5" text-anchor="middle">MSG RETRIEVAL</text>
+  <text x="421" y="49" fill="#8492A6" font-family="monospace" font-size="7" text-anchor="middle">Optimised · High-performance</text>
+
+  <!-- Other Core Modules -->
+  <rect x="346" y="72" width="150" height="36" rx="3" fill="#161D2A" stroke="#34E0E0" stroke-width="1"/>
+  <text x="421" y="86" fill="#34E0E0" font-family="monospace" font-size="8.5" text-anchor="middle">CORE MODULES</text>
+  <text x="421" y="99" fill="#8492A6" font-family="monospace" font-size="7" text-anchor="middle">Designed &amp; architected</text>
+
+  <!-- arrow to users/orgs -->
+  <line x1="496" y1="40" x2="540" y2="55" stroke="#B6FF3C" stroke-width="1.2" marker-end="url(#a)"/>
+  <line x1="496" y1="90" x2="540" y2="72" stroke="#34E0E0" stroke-width="1.2" marker-end="url(#b)"/>
+
+  <!-- Orgs block -->
+  <rect x="542" y="30" width="130" height="68" rx="3" fill="#161D2A" stroke="#1F2937" stroke-width="1"/>
+  <text x="607" y="52" fill="#8492A6" font-family="monospace" font-size="8.5" text-anchor="middle">ORGANISATIONS</text>
+  <!-- org icons (mini user rows) -->
+  <rect x="556" y="59" width="102" height="5" rx="2" fill="#1F2937"/>
+  <rect x="556" y="68" width="78" height="5" rx="2" fill="#1F2937"/>
+  <rect x="556" y="77" width="90" height="5" rx="2" fill="#1F2937"/>
+  <text x="607" y="92" fill="#1F2937" font-family="monospace" font-size="7" text-anchor="middle">All sizes</text>
+
+  <!-- Programmers Force badge -->
+  <rect x="696" y="18" width="96" height="24" rx="3" fill="#161D2A" stroke="#1F2937" stroke-width="1"/>
+  <text x="744" y="34" fill="#1F2937" font-family="monospace" font-size="7" text-anchor="middle">Programmers Force</text>
+
+  <!-- dates -->
+  <text x="696" y="108" fill="#1F2937" font-family="monospace" font-size="7.5" text-anchor="start" opacity="0.5">Oct – Dec 2020</text>
+
+  <!-- label -->
+  <text x="400" y="120" fill="#1F2937" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.3">WHISTLEIT — COLLABORATION PLATFORM · MESSAGE RETRIEVAL · MULTI-WORKSPACE</text>
+</svg>
