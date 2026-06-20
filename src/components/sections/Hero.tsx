@@ -85,7 +85,7 @@ export function Hero() {
               <span aria-hidden="true" style={{ position: "absolute", bottom: -1, right: -1, width: 22, height: 22, borderBottom: "2px solid var(--signal)", borderRight: "2px solid var(--signal)", zIndex: 1 }} />
 
               <Image
-                src="/profile6.png"
+                src="/profile7.png"
                 alt="Muhammad Rayan — Full Stack Developer"
                 fill
                 priority
