@@ -3,63 +3,54 @@ import { motion, useReducedMotion } from "motion/react";
 
 const ROLES = [
   {
-    period: "May 2026 – Present",
-    title: "Gateway Manager / Tech Manager",
-    company: "Zenithal OÜ",
-    location: "Remote · Estonia",
+    period: "June 2026 – Present",
+    title: "Full Stack Engineer",
+    company: "Think Advertise",
+    location: "Lahore, Pakistan",
     current: true,
     bullets: [
-      "Own end-to-end payment gateway operations — uptime, performance optimisation and real-time health monitoring across all transaction flows.",
-      "Lead PSP, acquiring bank and third-party provider integrations; architect connectivity protocols ensuring compliance and minimal latency.",
-      "Drive incident management and root-cause analysis for production issues, reducing mean time to resolution and protecting approval rates.",
-      "Analyse transaction performance and gateway health metrics; surface insights to improve conversion and operational efficiency.",
-      "Oversee merchant onboarding and technical integration lifecycle, standardising processes to accelerate time-to-live.",
-      "Act as Technical Manager across cross-functional squads — coordinating delivery, unblocking engineers and aligning stakeholders on platform roadmap.",
+      "Architected and deployed full-stack applications using React, Node.js, and PostgreSQL on production environments.",
+      "Integrated Web3 smart contracts using Ethers.js enabling secure on-chain transactions for end users.",
+      "Led performance optimization efforts reducing critical page load times significantly.",
     ],
   },
   {
-    period: "Jan 2021 – Apr 2026",
-    title: "Tech Lead",
-    company: "Developers Studio",
+    period: "June 2025 – June 2026",
+    title: "Full Stack Blockchain Engineer",
+    company: "BIG O SOFT",
+    location: "Remote, Pakistan",
+    current: false,
+    bullets: [
+      "Architected and deployed full-stack applications using React, Node.js, and PostgreSQL on production environments.",
+      "Integrated Web3 smart contracts using Ethers.js enabling secure on-chain transactions for end users.",
+      "Led performance optimization efforts reducing critical page load times significantly.",
+    ],
+  },
+  {
+    period: "Jan 2025 – May 2025",
+    title: "Associate Full Stack Developer",
+    company: "InvoZone",
     location: "Lahore, Pakistan",
     current: false,
     bullets: [
-      "Directed end-to-end software development lifecycle for fintech and iGaming clients — from technical scoping through delivery and post-launch support.",
-      "Architected and delivered a custom multi-PSP payment gateway serving live merchant traffic; led all acquiring bank and PSP integrations.",
-      "Managed a cross-functional engineering team; introduced code review standards, CI/CD practices and sprint ceremonies that measurably improved delivery cadence.",
-      "Served as primary technical liaison between clients and engineering — translating business requirements into system design and preventing scope misalignment.",
-      "Produced end-to-end technical documentation: API specifications, integration runbooks and onboarding guides adopted across multiple client engagements.",
-      "Established PCI DSS compliance on two major products in partnership with Risk Associates; executed and passed Quarterly ASV scans.",
-      "Monitored live production traffic via BurpSuite and custom dashboards; diagnosed and resolved critical issues with minimal downtime impact.",
-      "Supported pre-sales and merchant onboarding alongside commercial teams, improving integration success rates and reducing time-to-first-transaction.",
+      "Built responsive UI components using React and Tailwind CSS across multiple features.",
+      "Developed and maintained RESTful APIs with Node.js and Express for core backend operations.",
+      "Debugged and shipped features alongside senior developers in a production codebase.",
     ],
   },
   {
-    period: "Jan 2021 – Jun 2023",
-    title: "Lead Software Engineer",
-    company: "Valuno (formerly Quickbit)",
-    location: "Remote · Sweden",
-    current: false,
-    bullets: [
-      "Led development and maintenance of the core legacy affiliate, account management and payment gateway platform powering live European crypto-payments traffic.",
-      "Conducted systematic architecture analysis to identify performance bottlenecks; implemented targeted enhancements that improved system throughput and reliability.",
-      "Coordinated distributed engineering teams across multiple time zones — established async communication protocols and delivery rhythms that accelerated project cadence.",
-      "Served as domain authority on fintech and crypto-payment flows; guided technical decisions and upskilled team members on business-critical context.",
-      "Produced comprehensive technical documentation and knowledge-transfer artefacts that reduced onboarding time for incoming engineers.",
-      "Integrated new product features into the live system with zero major incidents, maintaining system integrity throughout a high-change period.",
-    ],
-  },
-  {
-    period: "Jan 2020 – Dec 2020",
-    title: "Associate Software Engineer",
-    company: "Programmers Force",
+    period: "Jul 2024 – Dec 2024",
+    title: "Software Engineering Intern",
+    company: "Villaex Technologies",
     location: "Lahore, Pakistan",
     current: false,
     bullets: [
-      "Contributed to WhistleIt.io — a scalable real-time collaboration platform enabling communication across workspaces, teams and channels for organisations of varying sizes.",
-      "Owned the backend message retrieval module: redesigned query patterns and caching strategy to achieve high throughput and sub-second response times.",
-      "Designed and proposed architectural solutions for multiple core modules, improving overall system scalability and maintainability.",
-      "Collaborated with a cross-functional product and engineering team to align technical design with product requirements and deliver a seamless user experience.",
+      "Contributed to frontend (React) and backend (Node.js) features shipped to production.",
+      "Debugged and resolved issues across the full stack in a live codebase.",
+      "Delivered small features end-to-end, from implementation to testing.",
+      "Managed version control via Git through PRs, code reviews, and issue tracking.",
+      "Validated feature functionality and performance before production releases.",
+      "Navigated and contributed to a large existing codebase within an agile team.",
     ],
   },
 ];
@@ -107,9 +98,9 @@ export function Experience() {
             letterSpacing: "-0.02em",
           }}
         >
-          Four roles.
+          Four companies.
           <br />
-          <span style={{ color: "var(--text-muted)" }}>Six years.</span>
+          <span style={{ color: "var(--text-muted)" }}>Real production.</span>
         </motion.h2>
 
         {/* Timeline */}

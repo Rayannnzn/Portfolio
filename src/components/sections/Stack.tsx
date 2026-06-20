@@ -3,38 +3,34 @@ import { motion, useReducedMotion } from "motion/react";
 
 const GROUPS = [
   {
-    label: "Languages, Frameworks & Architect",
+    label: "Languages",
     tags: [
-      "PHP", "JavaScript", "Python", "Laravel", 
-      "REST API", "SOAP", "MicroServices", "Monolithic", "Solution Architect",
+      "TypeScript", "JavaScript", "Solidity", "SQL", "HTML", "CSS",
     ],
   },
   {
-    label: "Data & Integrations",
+    label: "Frameworks & Libraries",
     tags: [
-      "PostgreSQL", "SQL", "MongoDB", "Redis", "JSON", "XML",
-      "MemSql", "API Documentation", "API Integration",
+      "React.js", "Next.js", "Node.js", "Express.js", "Tailwind CSS",
+      "shadcn/ui", "Ethers.js", "Web3.js", "Prisma",
     ],
   },
   {
-    label: "AI",
+    label: "Databases",
     tags: [
-      "LLM Applications", "RAG Pipelines", "Agent Workflows",
-      "Automation", "Cursor AI", "Claude Code",
+      "PostgreSQL", "MongoDB", "SQL (Relational)", "Prisma ORM",
     ],
   },
   {
-    label: "DevOps & Testing",
+    label: "Developer Tools",
     tags: [
-      "Docker", "AWS", "BitBucket", "Git/GitLab",
-      "Sqlmap", "Nmap", "Postman", "BurpSuit", "PlayWright"
+      "Git", "GitHub", "Postman", "Docker (Basic)", "Vercel", "VS Code",
     ],
   },
   {
-    label: "Leadership",
+    label: "Practices",
     tags: [
-      "Leading Teams", "Leading Communication", "Code Reviews",
-      "Technical Decisions", "Stakeholder Mgmt", "Client Comms", "Agile / Scrum",
+      "REST API Design", "Agile / Scrum", "Code Reviews", "Version Control", "PR Workflows",
     ],
   },
 ];

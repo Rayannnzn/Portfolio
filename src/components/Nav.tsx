@@ -6,8 +6,7 @@ const NAV_LINKS = [
   { href: "#stack",          label: "Stack" },
   { href: "#work",           label: "Work" },
   { href: "#experience",     label: "Experience" },
-  { href: "#collaborators",  label: "Platforms" },
-  { href: "#leadership",     label: "Leadership" },
+  { href: "#collaborators",  label: "Tools" },
   { href: "#contact",        label: "Contact" },
 ];
 
@@ -67,9 +66,9 @@ export function Nav() {
             href="#"
             className="mono text-sm font-bold tracking-[0.25em] uppercase"
             style={{ color: "var(--signal)" }}
-            aria-label="Ahmad Akbar — back to top"
+            aria-label="Muhammad Rayan — back to top"
           >
-            AA<span style={{ color: "var(--signal-dim)", opacity: 0.7 }}>.</span>
+            MR<span style={{ color: "var(--signal-dim)", opacity: 0.7 }}>.</span>
           </a>
 
           {/* Desktop links */}

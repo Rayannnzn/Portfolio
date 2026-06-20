@@ -32,7 +32,7 @@ export function Hero() {
               className="mono mb-5 text-xs tracking-[0.25em] uppercase"
               style={{ color: "var(--signal)" }}
             >
-              // GATEWAY MANAGER - TECH LEAD - SOFTWARE ENGINEER
+              // FULL STACK ENGINEER - REACT · NODE.JS · NEXT.JS
             </motion.p>
 
             <motion.h1
@@ -44,9 +44,9 @@ export function Hero() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Ahmad
+              Muhammad
               <br />
-              Akbar
+              Rayan
             </motion.h1>
 
             <motion.p
@@ -54,9 +54,9 @@ export function Hero() {
               className="mt-6 max-w-lg text-base md:text-lg leading-relaxed"
               style={{ color: "var(--text-muted)" }}
             >
-              I design and manage white-label payment solutions and build payment infrastructure that operates at scale — from fiat and crypto gateways to AI-driven fraud intelligence systems.
+              I design and build full-stack web applications and blockchain systems that operate at scale from pixel precise React and Next.js frontends to robust Node.js backends, production-grade APIs, and PostgreSQL databases engineered for real traffic..
               <br />
-              Focused on fintech integrations, wallet infrastructure, open banking, and payment orchestration across Europe, I help businesses launch and grow through secure, compliant, and scalable financial technology — including full payment infrastructure for the iGaming sector.
+              Focused on clean architecture, Web3 integrations, and end-to-end product ownership, I help teams launch and grow through fast, secure, and maintainable technology including full-stack DeFi platforms, SaaS products, and smart contract-powered applications..
             </motion.p>
 
             <motion.div
@@ -85,13 +85,15 @@ export function Hero() {
               <span aria-hidden="true" style={{ position: "absolute", bottom: -1, right: -1, width: 22, height: 22, borderBottom: "2px solid var(--signal)", borderRight: "2px solid var(--signal)", zIndex: 1 }} />
 
               <Image
-                src="/profile.png"
-                alt="Ahmad Akbar — Gateway Manager & Tech Lead"
+                src="/profile6.png"
+                alt="Muhammad Rayan — Full Stack Developer"
                 fill
                 priority
                 sizes="(max-width: 768px) 90vw, 300px"
-                className="object-cover"
-                style={{ borderRadius: "4px" }}
+                className="object-contain "
+                style={{ borderRadius: "4px"
+                  
+                 }}
               />
             </div>
           </motion.div>

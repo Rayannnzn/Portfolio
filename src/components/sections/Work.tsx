@@ -6,172 +6,51 @@ import { MermaidDiagram } from "@/components/MermaidDiagram";
 const PROJECTS = [
   {
     num: "01",
-    title: "RIDM.IO — Fiat-to-Crypto Payment Platform",
-    sub: "Open Banking · Multi-PSP Integrations",
+    title: "HireMyRoom — Full-Stack Rental Platform",
+    sub: "React · Node.js · Express · MongoDB · Tailwind CSS",
     image: "/proj-ridm.svg",
-    imageAlt: "RIDM.IO architecture: fiat UI, REST API, PSP and Open Banking flows",
+    imageAlt: "HireMyRoom architecture: React frontend, Express REST API, MongoDB database",
     metrics: [
-      { value: "Feb 2024", label: "Launched" },
-      { value: "Multi-PSP", label: "Provider integrations" },
-      { value: "Live", label: "Open Banking" },
+      { value: "Jun–Sep", label: "2025" },
+      { value: "Full-stack", label: "End-to-end" },
+      { value: "Live", label: "Deployed" },
     ],
     summary:
-      "Developed and integrated multiple Payment Service Providers for seamless fiat-to-crypto transactions. Implemented Open Banking support for secure bank transfers with improved transaction speed. Designed intuitive fiat payment interfaces and built embedded solutions to handle initial live traffic and validate system flow end-to-end.",
-    tags: ["Laravel", "PHP", "Open Banking", "PSP Integration", "Fiat-to-Crypto", "REST APIs", "Redis"],
+      "Built a full-stack rental platform enabling users to list, browse, and book rooms seamlessly. Implemented a secure authentication and authorization system for managing users and property listings. Developed RESTful APIs using Node.js and Express for handling bookings and data operations — deployed end-to-end with user auth, property listings, booking system and REST API fully functional.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "REST API", "Auth / JWT"],
     diagram: `graph LR
-  U[User] --> FE[Fiat Payment UI]
-  FE --> API[REST API]
-  API --> PSP[PSP Integrations]
-  API --> OB[Open Banking]
-  PSP --> CRYPTO[Crypto Settlement]
-  OB --> BANK[Bank Transfer]
+  U[User] --> FE[React Frontend]
+  FE --> API[Express REST API]
+  API --> AUTH[Auth System]
+  API --> DB[(MongoDB)]
+  API --> BOOK[Booking Engine]
   API:::hot
   classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "RIDM.IO fiat-to-crypto payment platform architecture",
+    diagramLabel: "HireMyRoom full-stack rental platform architecture",
   },
   {
     num: "02",
-    title: "CardEye — PCI-Compliant Card Acquiring System",
-    sub: "PCI DSS · ASV Scans · Merchant Onboarding",
+    title: "Alpha Pulse — Production SaaS Dashboard",
+    sub: "Next.js · TypeScript · shadcn/ui · Vercel Cron",
     image: "/proj-cardeye.svg",
-    imageAlt: "CardEye: card flow through payment gateway to PCI layer and acquiring bank",
+    imageAlt: "Alpha Pulse: Next.js dashboard with Vercel Cron jobs and shadcn/ui components",
     metrics: [
-      { value: "Feb 2022", label: "Project start" },
-      { value: "PCI DSS", label: "Compliance achieved" },
-      { value: "Quarterly", label: "ASV scans" },
+      { value: "Jan 2026", label: "In progress" },
+      { value: "Vercel", label: "Cron automation" },
+      { value: "shadcn", label: "Component system" },
     ],
     summary:
-      "Transitioned from Software Engineer to Team Lead on this card-acquiring product — driving architecture design from inception. Created flowcharts, architecture diagrams, and full technical documentation. Managed client communication, technical support, and merchant onboarding. Led the team through PCI DSS compliance and executed Quarterly ASV Scans in collaboration with Risk Associates.",
-    tags: ["Laravel", "PHP", "PCI DSS", "ASV Scans", "MySQL", "Redis", "REST APIs", "Merchant Onboarding"],
+      "Production SaaS dashboard built with Next.js and TypeScript featuring automated background jobs via Vercel Cron, a reusable shadcn/ui component library, and server-side data handling. Designed responsive and reusable UI components improving consistency and user experience. Integrated backend logic and APIs within Next.js, handling data flow, state management, and server-side operations.",
+    tags: ["Next.js", "TypeScript", "shadcn/ui", "Tailwind CSS", "Vercel Cron", "Server Actions"],
     diagram: `graph LR
-  M[Merchant] --> GW[Payment Gateway]
-  GW --> ACQ[Acquiring Bank]
-  GW --> PCI[PCI Compliance Layer]
-  PCI --> SCAN[ASV Scanner]
-  GW --> DB[(Card Data Vault)]
-  GW:::hot
+  U[User] --> DASH[Next.js Dashboard]
+  DASH --> SA[Server Actions]
+  SA --> CRON[Vercel Cron Jobs]
+  SA --> DB[(Database)]
+  DASH --> UI[shadcn/ui System]
+  SA:::hot
   classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "CardEye card acquiring system architecture",
-  },
-  {
-    num: "03",
-    title: "INCHARGE — Blixtpay Instant Payout Service",
-    sub: "Intergiro BAAS · Merchant Payouts",
-    image: "/proj-incharge.svg",
-    imageAlt: "INCHARGE payout flow: merchant through Payout API, Intergiro BAAS to InchargeCard",
-    metrics: [
-      { value: "Instant", label: "Payout speed" },
-      { value: "BAAS", label: "Intergiro integration" },
-      { value: "Multi-merchant", label: "Support" },
-    ],
-    summary:
-      "Implemented an instant payout solution for merchants using InchargeCard. Led requirements analysis, integrated Intergiro Banking-as-a-Service APIs, and provided architectural guidance throughout. Supported the team with domain expertise in fintech payout flows and technical leadership to ensure reliable, compliant disbursements.",
-    tags: ["Laravel", "Intergiro BAAS", "InchargeCard", "REST APIs", "Fintech", "Payout Systems"],
-    diagram: `graph LR
-  MERCH[Merchant] --> API[Payout API]
-  API --> INTG[Intergiro BAAS]
-  INTG --> CARD[InchargeCard]
-  CARD --> BANK[Beneficiary Bank]
-  API --> LOG[(Transaction Log)]
-  API:::hot
-  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "INCHARGE instant payout service architecture",
-  },
-  {
-    num: "04",
-    title: "FlowSoftware — Crypto Processing & Wallet API",
-    sub: "Quantoz · CleanPay · Redoc API Docs",
-    image: "/proj-flowsoftware.svg",
-    imageAlt: "FlowSoftware: Wallet API hub connecting Quantoz, CleanPay, blockchain and Redoc",
-    metrics: [
-      { value: "Quantoz", label: "Crypto provider" },
-      { value: "CleanPay", label: "Fiat gateway" },
-      { value: "Redoc", label: "API docs" },
-    ],
-    summary:
-      "Designed and developed crypto processing endpoints using the Quantoz Crypto Solution Provider. Integrated fiat payments via the CleanPay (Cosmo) payment gateway and created comprehensive API documentation in Redoc for WalletAPI services. Assisted in resolving critical system issues and ensured seamless connectivity between crypto and fiat rails.",
-    tags: ["Quantoz", "CleanPay", "Laravel", "PHP", "Redoc", "YAML", "REST APIs", "Crypto Processing"],
-    diagram: `graph LR
-  USER[User] --> WALL[Wallet API]
-  WALL --> QTZ[Quantoz Crypto]
-  WALL --> CP[CleanPay Fiat]
-  QTZ --> CHAIN[Blockchain Nodes]
-  CP --> BANK[Banking Rails]
-  WALL:::hot
-  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "FlowSoftware crypto and fiat processing architecture",
-  },
-  {
-    num: "05",
-    title: "FarmTech — IoT Pest Risk Prediction System",
-    sub: "React Native · IoT Sensors · Farmbot",
-    image: "/proj-farmtech.svg",
-    imageAlt: "FarmTech: IoT sensors through pest risk algorithm to mobile app and Farmbot automation",
-    metrics: [
-      { value: "Aug–Nov", label: "2021 delivery" },
-      { value: "IoT", label: "Sensor-driven" },
-      { value: "Real-time", label: "Risk insights" },
-    ],
-    summary:
-      "Led backend development for an IoT-powered pest risk prediction system, coordinating closely with the React Native mobile app team. Implemented the pest risk algorithm using temperature sensor data from IoT-enabled hardware. Built an admin panel for farmer onboarding and real-time insights, and integrated Farmbot for automated pest management to optimise farming operations.",
-    tags: ["Laravel", "PHP", "React Native", "IoT", "Farmbot", "MySQL", "REST APIs", "Admin Panel"],
-    diagram: `graph LR
-  IOT[IoT Sensors] --> ING[Data Ingestion API]
-  ING --> ALGO[Pest Risk Algorithm]
-  ALGO --> APP[Mobile App]
-  ALGO --> ADMIN[Admin Panel]
-  ADMIN --> FB[Farmbot Automation]
-  ALGO:::hot
-  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "FarmTech IoT pest risk prediction system architecture",
-  },
-  {
-    num: "06",
-    title: "Quickbit — Legacy Affiliate & Payment Gateway",
-    sub: "REST APIs · Remote Team Collaboration",
-    image: "/proj-quickbit.svg",
-    imageAlt: "Quickbit: legacy system enhanced with REST APIs connecting affiliate portal, payment gateway and acquiring",
-    metrics: [
-      { value: "Jan 2021", label: "Project start" },
-      { value: "Legacy", label: "System stabilised" },
-      { value: "Multi-TZ", label: "Remote teams" },
-    ],
-    summary:
-      "Maintained and enhanced the legacy affiliate, account management, and payment gateway system for Quickbit (now Valuno). Led architecture analysis to identify optimisation opportunities and implemented targeted enhancements for performance and scalability. Worked across multiple time zones with remote teams, facilitated knowledge sharing, and integrated new features with minimal disruption to live operations.",
-    tags: ["Laravel", "PHP", "REST APIs", "PostgreSQL", "Redis", "System Architecture", "Legacy Systems"],
-    diagram: `graph LR
-  AFF[Affiliate Portal] --> API[REST API]
-  API --> ACC[Account Service]
-  API --> PAY[Payment Gateway]
-  PAY --> PSP[Acquiring PSPs]
-  API --> DB[(Legacy DB)]
-  API:::hot
-  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "Quickbit affiliate and payment gateway architecture",
-  },
-  {
-    num: "07",
-    title: "WhistleIt — Team Collaboration Platform",
-    sub: "REST APIs · Programmers Force · Oct–Dec 2020",
-    image: "/proj-whistleit.svg",
-    imageAlt: "WhistleIt collaboration platform showing multi-workspace messaging architecture with retrieval module",
-    metrics: [
-      { value: "Multi-WS", label: "Workspace support" },
-      { value: "Optimised", label: "Msg retrieval" },
-      { value: "Oct–Dec", label: "2020" },
-    ],
-    summary:
-      "A robust collaboration platform designed to facilitate communication across teams and organisations of all sizes. My primary focus was the backend message retrieval module — optimising it for high performance and reliability — alongside designing scalable solutions for multiple other core modules to ensure seamless system integration.",
-    tags: ["Laravel", "PHP", "REST APIs", "MySQL", "Backend Architecture", "Message Queue", "Programmers Force"],
-    diagram: `graph LR
-  WS[Workspaces] --> CORE[WhistleIt Platform]
-  CORE --> MSG[Msg Retrieval Module]
-  CORE --> MOD[Core Modules]
-  MSG --> ORG[Organisations]
-  MOD --> ORG
-  CORE:::hot
-  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
-    diagramLabel: "WhistleIt collaboration platform architecture",
+    diagramLabel: "Alpha Pulse SaaS dashboard architecture",
   },
 ];
 

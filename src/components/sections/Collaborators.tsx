@@ -4,252 +4,124 @@ import { motion, useReducedMotion } from "motion/react";
 /* ─── Platform data ──────────────────────────────────────────── */
 const PLATFORMS = [
   {
-    name: "Intergiro",
-    short: "INTG",
-    category: "BAAS · Banking",
-    description: "Swedish EMI-licensed Banking-as-a-Service platform — multi-currency IBANs, card issuing & acquiring across Europe.",
-    color: "#4A9EFF",
-    url: "https://intergiro.com",
+    name: "React.js",
+    short: "RJCT",
+    category: "Frontend · UI",
+    description: "Component-based UI library for building interactive and performant user interfaces — used across all frontend projects.",
+    color: "#61DAFB",
+    url: "https://react.dev",
   },
   {
-    name: "CleanPay",
-    short: "CLNP",
-    category: "Fiat Gateway",
-    description: "Payment gateway for fiat processing and merchant settlements, integrated via Cosmo infrastructure.",
+    name: "Next.js",
+    short: "NEXT",
+    category: "Framework · SSR",
+    description: "Production React framework with server-side rendering, App Router, Server Actions, and seamless Vercel deployment.",
     color: "#B6FF3C",
-    url: "#",
+    url: "https://nextjs.org",
   },
   {
-    name: "PaySafe",
-    short: "PSFE",
-    category: "PSP · Payments",
-    description: "Global payment platform enabling digital wallets, card processing and cash payments across 120+ countries.",
-    color: "#FF6B4A",
-    url: "https://paysafe.com",
+    name: "Node.js",
+    short: "NODE",
+    category: "Backend · Runtime",
+    description: "JavaScript runtime for building fast, scalable server-side applications and RESTful APIs with Express.",
+    color: "#68A063",
+    url: "https://nodejs.org",
   },
   {
-    name: "SEON",
-    short: "SEON",
-    category: "Fraud · AML",
-    description: "AI-powered fraud prevention and AML compliance — 300+ digital signals, real-time risk scoring & PEP screening.",
+    name: "TypeScript",
+    short: "TS",
+    category: "Language · Types",
+    description: "Strongly typed superset of JavaScript — used for safer, more maintainable codebases across frontend and backend.",
+    color: "#4A9EFF",
+    url: "https://www.typescriptlang.org",
+  },
+  {
+    name: "Tailwind CSS",
+    short: "TW",
+    category: "Styling · Utility",
+    description: "Utility-first CSS framework enabling rapid, consistent UI development without leaving HTML — used in every project.",
+    color: "#38BDF8",
+    url: "https://tailwindcss.com",
+  },
+  {
+    name: "shadcn/ui",
+    short: "SHAD",
+    category: "Component Library",
+    description: "Accessible, customizable React component library built on Radix UI — used in Alpha Pulse for the full design system.",
     color: "#FF4A8D",
-    url: "https://seon.io",
+    url: "https://ui.shadcn.com",
   },
   {
-    name: "SingleStore",
-    short: "SSDB",
-    category: "Real-time DB",
-    description: "Unified real-time database for transactions + analytics — high-throughput SQL at scale for fintech workloads.",
+    name: "MongoDB",
+    short: "MDB",
+    category: "Database · NoSQL",
+    description: "Document-based NoSQL database — used in HireMyRoom for flexible schema design around property listings and bookings.",
+    color: "#68A063",
+    url: "https://mongodb.com",
+  },
+  {
+    name: "PostgreSQL",
+    short: "PSQL",
+    category: "Database · SQL",
+    description: "Robust relational database used for structured data and complex queries in production environments at BIG O SOFT.",
+    color: "#336791",
+    url: "https://postgresql.org",
+  },
+  {
+    name: "Prisma",
+    short: "PRM",
+    category: "ORM · Database",
+    description: "Type-safe ORM for Node.js — used for schema management, migrations, and strongly typed database queries.",
     color: "#9B59FF",
-    url: "https://singlestore.com",
+    url: "https://prisma.io",
   },
   {
-    name: "Rendix",
-    short: "RNDX",
-    category: "Payments · BR",
-    description: "Rendimentopay's Rendix platform — Brazilian payment infrastructure for fiat transaction processing.",
-    color: "#34E0E0",
-    url: "https://www.rendimentopay.com.br/en/rendix/",
-  },
-  {
-    name: "Webcheque",
-    short: "WCHQ",
-    category: "Online Payments",
-    description: "Digital cheque and online payment solution enabling secure electronic payment flows for merchants.",
+    name: "Ethers.js",
+    short: "ETH",
+    category: "Web3 · Blockchain",
+    description: "JavaScript library for interacting with the Ethereum blockchain — used to integrate smart contracts at BIG O SOFT.",
     color: "#B6FF3C",
-    url: "#",
+    url: "https://ethers.org",
   },
   {
-    name: "TrustFlow",
-    short: "TFLW",
-    category: "Payment Flow",
-    description: "Payment orchestration and trust-layer infrastructure for routing and optimising transaction flows.",
-    color: "#4A9EFF",
-    url: "#",
-  },
-  {
-    name: "TrustPayments",
-    short: "TPAY",
-    category: "Card Acquiring",
-    description: "European card acquiring and payment gateway — PCI-compliant processing for merchants across verticals.",
+    name: "Solidity",
+    short: "SOL",
+    category: "Smart Contracts",
+    description: "Object-oriented language for writing EVM-compatible smart contracts — used for on-chain transaction logic.",
     color: "#FF8A3C",
-    url: "https://trustpayments.com",
+    url: "https://soliditylang.org",
   },
   {
-    name: "Coolbet",
-    short: "CLBT",
-    category: "iGaming · Sports",
-    description: "Award-winning B2C iGaming operator with proprietary sportsbook tech across Northern Europe, Canada & LatAm.",
+    name: "Vercel",
+    short: "VRCL",
+    category: "Deployment · CI",
+    description: "Cloud platform for frontend and serverless deployments — powers Alpha Pulse with Cron jobs and instant global delivery.",
     color: "#34E0E0",
-    url: "https://coolbet.com",
+    url: "https://vercel.com",
   },
   {
-    name: "ComeOn Group",
-    short: "CMGP",
-    category: "iGaming · Operator",
-    description: "Malta-based iGaming group operating 15+ licensed casino and sportsbook brands across regulated markets.",
-    color: "#FF6B4A",
-    url: "https://comeon-group.com",
-  },
-  {
-    name: "Finera",
-    short: "FNRA",
-    category: "Orchestration",
-    description: "Next-gen payment orchestration — card acquiring, open banking, payouts and crypto processing in one platform.",
-    color: "#B6FF3C",
-    url: "https://finera.com",
-  },
-  {
-    name: "Madfin",
-    short: "MDFN",
-    category: "Fintech",
-    description: "Fintech platform powering payment and financial infrastructure solutions for modern digital businesses.",
-    color: "#9B59FF",
-    url: "#",
-  },
-  {
-    name: "Paytently",
-    short: "PTLY",
-    category: "PSP · Orchestration",
-    description: "Malta-regulated payment institution connecting merchants to a global network of acquirers with AML controls.",
-    color: "#4A9EFF",
-    url: "https://paytently.com",
-  },
-  {
-    name: "Akurateco",
-    short: "AKRT",
-    category: "White-label PSP",
-    description: "White-label payment orchestration system — smart routing, cascading and analytics for payment providers.",
-    color: "#FF4A8D",
-    url: "https://akurateco.com",
-  },
-  {
-    name: "Quantoz Payments",
-    short: "QNTZ",
-    category: "Crypto · Stablecoin",
-    description: "Dutch-regulated crypto infrastructure provider — stablecoin issuance, custody and compliant digital asset payment rails.",
-    color: "#4A9EFF",
-    url: "https://www.quantoz.com",
-  },
-  {
-    name: "Pagora",
-    short: "PGRA",
-    category: "PSP · Gibraltar",
-    description: "Gibraltar-based payment institution providing card acquiring, online payment processing and merchant services.",
-    color: "#34E0E0",
-    url: "https://pagora.gi",
-  },
-  {
-    name: "Quickbit",
-    short: "QKBT",
-    category: "Crypto · Exchange",
-    description: "Swedish crypto company enabling consumers and merchants to buy, sell and use cryptocurrency for everyday payments.",
-    color: "#B6FF3C",
-    url: "https://qb-europe.com/int/en-us",
-  },
-  {
-    name: "Risk Associates",
-    short: "RISK",
-    category: "Compliance · PCI",
-    description: "Specialist compliance and cybersecurity firm — PCI DSS QSA, ASV scanning, ISO 27001 and financial risk advisory.",
-    color: "#FF6B4A",
-    url: "https://riskassociates.com",
-  },
-  {
-    name: "Whitegallo",
-    short: "WGLO",
-    category: "Technology",
-    description: "Technology services firm delivering software engineering, systems integration and digital transformation solutions.",
+    name: "GitHub",
+    short: "GH",
+    category: "Version Control",
+    description: "Git-based platform for version control, pull requests, code reviews, and issue tracking across all projects.",
     color: "#F5F5F5",
-    url: "https://whitegallo.com",
+    url: "https://github.com/Rayannnzn",
   },
   {
-    name: "Blackgallo",
-    short: "BGLO",
-    category: "Technology",
-    description: "Technology and software development company providing engineering expertise and product delivery services.",
-    color: "#8492A6",
-    url: "https://blackgallo.net",
-  },
-  {
-    name: "Onfido",
-    short: "ONFD",
-    category: "KYC · Identity",
-    description: "AI-powered identity verification platform — document checks, facial biometrics, liveness detection and AML watchlist screening for 1,200+ businesses globally.",
+    name: "Docker",
+    short: "DCK",
+    category: "DevOps · Container",
+    description: "Containerization platform for consistent development and deployment environments — used for local development workflows.",
     color: "#4A9EFF",
-    url: "https://onfido.com",
+    url: "https://docker.com",
   },
   {
-    name: "Alice Biometrics",
-    short: "ALCE",
-    category: "Biometric KYC",
-    description: "Spanish-founded biometric identity verification — sub-second selfie + ID document matching with passive liveness detection for frictionless digital onboarding.",
-    color: "#FF4A8D",
-    url: "https://alicebiometrics.com",
-  },
-  {
-    name: "MaxMind",
-    short: "MXMD",
-    category: "GeoIP · Fraud",
-    description: "Industry-leading IP geolocation (GeoIP) and fraud prevention — minFraud transaction risk scoring, proxy detection and real-time threat intelligence since 2002.",
+    name: "Postman",
+    short: "PSTM",
+    category: "API Testing",
+    description: "API development and testing platform — used for designing, documenting, and testing RESTful API endpoints.",
     color: "#FF6B4A",
-    url: "https://www.maxmind.com",
-  },
-  {
-    name: "Shufti Pro",
-    short: "SHFT",
-    category: "KYC · AML",
-    description: "AI-powered KYC, AML and identity verification platform — 3,000+ document types, 230+ countries, real-time biometric checks and PEP/sanctions screening.",
-    color: "#9B59FF",
-    url: "https://shuftipro.com",
-  },
-  {
-    name: "Worldpay",
-    short: "WPLY",
-    category: "Global PSP",
-    description: "One of the world's largest payment processors — card acquiring, multi-currency processing and risk management across 146 countries for merchants of all sizes.",
-    color: "#34E0E0",
-    url: "https://www.worldpay.com",
-  },
-  {
-    name: "Ekata",
-    short: "EKAT",
-    category: "Identity · Risk",
-    description: "Mastercard-owned global identity verification network — phone, email, address and IP risk signals for real-time fraud prevention and customer onboarding.",
-    color: "#FF8A3C",
-    url: "https://ekata.com",
-  },
-  {
-    name: "IVY",
-    short: "IVY",
-    category: "Open Banking",
-    description: "Berlin-based instant bank payments API — A2A payments across 500M+ bank accounts in 50+ countries via open banking rails, cutting card fees and eliminating chargebacks.",
-    color: "#B6FF3C",
-    url: "https://getivy.io",
-  },
-  {
-    name: "Checkout.com",
-    short: "CHKT",
-    category: "PSP · Global",
-    description: "Unified global payment platform — card acquiring, alternative payment methods, issuing, fraud prevention and payouts for high-growth businesses in 45+ markets.",
-    color: "#4A9EFF",
-    url: "https://checkout.com",
-  },
-  {
-    name: "Signicat",
-    short: "SGNC",
-    category: "Digital Identity",
-    description: "European digital identity and e-signature platform — eIDAS-compliant eID authentication, document signing and KYC for regulated industries across 30+ countries.",
-    color: "#34E0E0",
-    url: "https://signicat.com",
-  },
-  {
-    name: "IDology",
-    short: "IDOL",
-    category: "Identity · KYC",
-    description: "US-based identity verification and fraud prevention — real-time ID document checks, database verification, age validation and step-up authentication workflows.",
-    color: "#FF4A8D",
-    url: "https://idology.com",
+    url: "https://postman.com",
   },
 ];
 
@@ -315,7 +187,7 @@ export function Collaborators() {
           className="mono mb-10 text-xs tracking-[0.25em] uppercase"
           style={{ color: "var(--text-muted)" }}
         >
-          // 05 — PLATFORMS & COLLABORATIONS
+          // 05 — TOOLS & ECOSYSTEM
         </motion.p>
 
         {/* Heading */}
@@ -328,7 +200,7 @@ export function Collaborators() {
             letterSpacing: "-0.02em",
           }}
         >
-          Built across the ecosystem.
+          The full toolkit.
         </motion.h2>
 
         <motion.p
@@ -336,8 +208,7 @@ export function Collaborators() {
           className="mb-16 max-w-xl"
           style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.7 }}
         >
-          Platforms, payment rails, fraud engines and gaming infrastructure I've
-          integrated, operated and shipped against throughout my journey.
+          Technologies, frameworks, libraries and tools I use to build and ship production-grade web applications.
         </motion.p>
 
         {/* Grid */}
@@ -459,7 +330,7 @@ export function Collaborators() {
           className="mono text-xs mt-12"
           style={{ color: "var(--text-muted)", opacity: 0.4, letterSpacing: "0.1em" }}
         >
-          // {PLATFORMS.length} PLATFORMS · FINTECH · IGAMING · BAAS · KYC · AML · FRAUD · OPEN BANKING · CRYPTO
+          // {PLATFORMS.length} TOOLS · FRONTEND · BACKEND · DATABASE · WEB3 · DEVOPS · TESTING
         </motion.p>
 
       </div>

@@ -2,15 +2,17 @@
 import { motion, useReducedMotion } from "motion/react";
 
 const STATS = [
-  { value: "6+",   label: "Years \nengineering" },
-  { value: "~1M",  label: "Transactions\nper month" },
+  { value: "3+",   label: "Years in\nproduction" },
+  { value: "4",    label: "Companies\nshipped with" },
   { value: "10K+", label: "Monthly active\nusers" },
   { value: "150+", label: "High impact features\nengineered" },
 ];
-
+// 10K+
+// Monthly active
+// users
 const PARAGRAPHS = [
-  "Solution-driven software professional with 6+ years of experience in designing, developing, and maintaining robust software systems and architectures. Demonstrated expertise in delivering scalable solutions, optimizing performance, and ensuring high-quality code standards. Strong communication and collaboration skills with proven ability to work effectively in cross-functional teams. Experienced in partnering with leading fintech and consulting firms across Europe to deliver innovative technology solutions.",
-  "The next chapter is applying AI to high-trust financial systems: intelligent fraud detection, compliance automation, risk assessment, payment operations, and LLM-powered workflows built with the same standards as production payment infrastructure—accurate, observable, secure, and audit-ready.",
+  "Solution-driven software professional with 3+ years of experience in designing, developing, and maintaining robust software systems and architectures. Demonstrated expertise in delivering scalable solutions, optimizing performance, and ensuring high-quality code standards. Strong communication and collaboration skills with proven ability to work effectively in cross-functional teams. Experienced in partnering with leading fintech and consulting firms across Europe to deliver innovative technology solutions.",
+  "The next chapter is applying AI to high-trust financial systems: intelligent fraud detection, compliance automation, risk assessment, payment operations, and LLM-powered workflows built with the same standards as production payment infrastructure accurate, observable, secure, and audit-ready."
 ];
 
 export function About() {
@@ -56,9 +58,9 @@ export function About() {
             letterSpacing: "-0.02em",
           }}
         >
-          Fintech depth.
+          Full-stack depth.
           <br />
-          <span style={{ color: "var(--signal)" }}>AI velocity.</span>
+          <span style={{ color: "var(--signal)" }}>Ship velocity.</span>
         </motion.h2>
 
         {/* Content grid */}
@@ -83,7 +85,7 @@ export function About() {
               className="mono text-sm pt-2"
               style={{ color: "var(--signal-dim)", borderTop: "1px solid var(--line)", paddingTop: "1.25rem" }}
             >
-              FinTech · Crypto/Fiat Payments · WhiteLabel Solutions · Gateways · Integrations & Support   AI-Driven Fraud Detection · Client Services · Scalable Solutions · iGaming Payments Space
+              React · Next.js · Node.js · TypeScript · Web3 · REST APIs · PostgreSQL · MongoDB · Tailwind CSS · Vercel
             </motion.p>
           </div>
 

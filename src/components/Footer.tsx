@@ -6,7 +6,7 @@ export function Footer() {
           className="mono text-xs tracking-[0.2em] uppercase"
           style={{ color: "var(--text-muted)" }}
         >
-          // AHMAD AKBAR — LAHORE, PAKISTAN
+          // MUHAMMAD RAYAN — LAHORE, PAKISTAN
         </p>
         <p
           className="mono text-xs"

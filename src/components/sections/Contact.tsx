@@ -5,22 +5,22 @@ import { useState } from "react";
 const LINKS = [
   {
     label: "Email",
-    value: "ahmad294b4@gmail.com",
-    href: "mailto:ahmad294b4@gmail.com",
+    value: "rayan.muhammadzzz31@gmail.com",
+    href: "mailto:rayan.muhammadzzz31@gmail.com",
     icon: "→",
   },
   {
     label: "Phone",
-    value: "+92 317 4007369",
-    href: "tel:+923174007369",
+    value: "+92 317 6688354",
+    href: "tel:+923176688354",
     icon: "→",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ahmad-akbar",
-    href: "https://www.linkedin.com/in/ahmad-akbar-038570180/",
+    value: "linkedin.com/in/muhammad-rayan",
+    href: "https://www.linkedin.com/in/muhammad-rayan-779318320/",
     icon: "→",
-  },
+  }
 ];
 
 export function Contact() {
@@ -47,7 +47,7 @@ export function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     );
-    window.location.href = `mailto:ahmad294b4@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:rayan.muhammadzzz31@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
     setTimeout(() => setSent(false), 4000);
   };
@@ -108,12 +108,7 @@ export function Contact() {
               className="mb-10 text-base leading-relaxed"
               style={{ color: "var(--text-muted)" }}
             >
-              6+ years architecting payment gateways, PSP integrations and fintech
-              infrastructure across Europe and beyond — from PCI-compliant card
-              acquiring to fiat-to-crypto rails and open banking flows. Open to
-              senior backend, fintech, managing white-label solutions, building
-              AI-driven fraud detection systems or processes, and AI-engineering
-              roles. Reach out directly; I respond to every message.
+              Full Stack Developer shipping production applications with React, Next.js, Node.js and TypeScript. Open to full-time roles, freelance projects, or collaboration — frontend, backend, or end-to-end. Based in Lahore, Pakistan. Reach out directly; I respond to every message.
             </motion.p>
 
             {/* Contact links */}
@@ -255,7 +250,7 @@ export function Contact() {
           className="mono mt-20 text-xs tracking-[0.2em] uppercase"
           style={{ color: "var(--text-muted)", opacity: 0.45 }}
         >
-          // AHMAD AKBAR — LAHORE, PAKISTAN — AVAILABLE FOR REMOTE
+          // MUHAMMAD RAYAN — LAHORE, PAKISTAN — AVAILABLE FOR REMOTE
         </motion.p>
 
       </div>
