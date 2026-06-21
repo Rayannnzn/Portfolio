@@ -9,9 +9,11 @@ const ROLES = [
     location: "Lahore, Pakistan",
     current: true,
     bullets: [
-      "Architected and deployed full-stack applications using React, Node.js, and PostgreSQL on production environments.",
-      "Integrated Web3 smart contracts using Ethers.js enabling secure on-chain transactions for end users.",
-      "Led performance optimization efforts reducing critical page load times significantly.",
+      "Lead end-to-end delivery of client-facing web products owning technical direction from requirements and system design through staging, QA, and production release.",
+      "Architect and maintain internal tooling and dashboards that surface operational data to non-technical stakeholders, reducing reliance on ad-hoc engineering support.",
+      "Design and own backend API systems built on Node.js and PostgreSQL; define data contracts, access patterns, and integration standards consumed across frontend and third-party surfaces.",
+      "Guide and unblock junior engineers across the team — conducting code reviews, setting quality standards, and providing technical direction on implementation approach and architecture decisions.",
+      "Serve as the primary technical point of contact across cross-functional workstreams — translating product requirements into system design and keeping delivery aligned with business goals.",
     ],
   },
   {
@@ -21,9 +23,11 @@ const ROLES = [
     location: "Remote, Pakistan",
     current: false,
     bullets: [
-      "Architected and deployed full-stack applications using React, Node.js, and PostgreSQL on production environments.",
-      "Integrated Web3 smart contracts using Ethers.js enabling secure on-chain transactions for end users.",
-      "Led performance optimization efforts reducing critical page load times significantly.",
+      "Architected and shipped full-stack applications across the complete lifecycle from technical scoping through deployment on React, Node.js, and PostgreSQL.",
+      "Owned smart contract integration using Ethers.js; defined transaction flow standards enabling secure, auditable on-chain operations for end users.",
+      "Directed performance optimisation initiatives; analysed runtime and rendering bottlenecks to deliver measurable improvements to production load times.",
+      "Diagnosed and resolved a suite of performance issues across the stack; delivered measurable improvements in page responsiveness and user-facing load times in production.",
+      "Contributed to a remote-first engineering culture by maintaining clear async communication, thorough documentation, and consistent delivery against sprint commitments.",
     ],
   },
   {
@@ -33,9 +37,11 @@ const ROLES = [
     location: "Lahore, Pakistan",
     current: false,
     bullets: [
-      "Built responsive UI components using React and Tailwind CSS across multiple features.",
-      "Developed and maintained RESTful APIs with Node.js and Express for core backend operations.",
-      "Debugged and shipped features alongside senior developers in a production codebase.",
+      "Delivered production-grade UI components in React and Tailwind CSS scoping, implementing, and shipping features across multiple concurrent workstreams.",
+      "Designed and maintained RESTful APIs in Node.js and Express underpinning core backend operations; contributed architectural input on data modelling and endpoint contracts.",
+      "Resolved critical production defects and shipped features end-to-end across a live, high-traffic codebase operating with increasing autonomy within a senior-led team.",
+      "Collaborated closely with senior engineers and product leads to surface technical constraints early, contributing to scope decisions that reduced last-minute rework and protected delivery timelines.",
+      "Maintained consistent delivery velocity across sprint cycles managing multiple in-flight workstreams, self-prioritising tasks, and communicating blockers proactively to keep team throughput uninterrupted.",
     ],
   },
   {
@@ -45,12 +51,11 @@ const ROLES = [
     location: "Lahore, Pakistan",
     current: false,
     bullets: [
-      "Contributed to frontend (React) and backend (Node.js) features shipped to production.",
-      "Debugged and resolved issues across the full stack in a live codebase.",
-      "Delivered small features end-to-end, from implementation to testing.",
-      "Managed version control via Git through PRs, code reviews, and issue tracking.",
-      "Validated feature functionality and performance before production releases.",
-      "Navigated and contributed to a large existing codebase within an agile team.",
+      "Delivered full-stack features end-to-end in React and Node.js scoped, implemented, tested, and shipped to production within an agile team.",
+      "Diagnosed and resolved issues across a large live codebase; maintained system stability while onboarding to a complex production environment.",
+      "Contributed to code review and version control workflows via Git submitting PRs, addressing review feedback, and tracking work through issue management tooling.",
+      "Validated feature correctness and performance against acceptance criteria before each production release catching edge cases during QA that prevented regressions from reaching end users.",
+      "Ramped independently on an unfamiliar, large-scale production codebase within the first sprint mapping system architecture, understanding data flows, and shipping assigned work without requiring extended handholding.",
     ],
   },
 ];
