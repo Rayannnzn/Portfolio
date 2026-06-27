@@ -52,6 +52,78 @@ const PROJECTS = [
   classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
     diagramLabel: "Alpha Pulse SaaS dashboard architecture",
   },
+  {
+    num: "03",
+    title: "KineTex — Trustless Freelance Payments",
+    sub: "Rust · Solana · Anchor · Next.js · TypeScript · Web3.js",
+    image: "/proj-farmtech.svg",
+    imageAlt: "KineTex: Solana on-chain escrow via Anchor program, Next.js dashboard, instant SOL release on contract completion",
+    metrics: [
+      { value: "45.20 SOL", label: "Locked in escrow" },
+      { value: "12", label: "Completed contracts" },
+      { value: "Devnet", label: "Live on Solana" },
+    ],
+    summary:
+      "Decentralized freelance payment protocol on Solana enabling trustless escrow contracts — clients lock SOL on-chain, work is submitted and verified, and funds release instantly upon approval with no intermediaries. Built with Rust and Anchor for the smart contracts, Next.js for the dashboard, and Web3.js for on-chain interaction. 12 contracts completed with 45.20 SOL locked during the devnet phase.",
+    tags: ["Rust", "Solana", "Anchor", "Next.js", "TypeScript", "Web3.js"],
+    diagram: `graph LR
+  C[Client] --> ESCROW[On-chain Escrow]
+  ESCROW --> ANCHOR[Anchor Program]
+  ANCHOR --> VER[Work Verification]
+  VER --> PAY[SOL Release]
+  F[Freelancer] --> VER
+  ANCHOR:::hot
+  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
+    diagramLabel: "KineTex Solana escrow architecture with Anchor program and trustless payment flow",
+  },
+  {
+    num: "04",
+    title: "NFT Marketplace — Decentralized Trading Platform",
+    sub: "Solidity · Next.js · TypeScript · PostgreSQL · Docker · Wagmi",
+    image: "/proj-quickbit.svg",
+    imageAlt: "NFT Marketplace: live blockchain indexer syncing to PostgreSQL, Next.js frontend with Wagmi wallet integration",
+    metrics: [
+      { value: "1 month", label: "Duration" },
+      { value: "Full-stack", label: "Frontend + Indexer + DB" },
+      { value: "Live", label: "Vercel Deployed" },
+    ],
+    summary:
+      "Built a fully-featured NFT marketplace with real-time blockchain indexers that sync listing, purchase, and cancellation events to PostgreSQL — ensuring live, accurate data across the frontend and database. Added a compliance route to prevent suspicious or illicit access, automatic NFT delisting based on chain events, and an optimized UI for fast browsing and wallet interaction via Wagmi.",
+    tags: ["Solidity", "Next.js", "TypeScript", "PostgreSQL", "Docker", "Wagmi", "Vercel"],
+    diagram: `graph LR
+  BC[Blockchain Events] --> IDX[Live Indexer]
+  IDX --> DB[(PostgreSQL)]
+  DB --> API[Next.js API]
+  API --> UI[NFT Frontend]
+  UI --> W[Wagmi / Wallet]
+  IDX:::hot
+  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
+    diagramLabel: "NFT Marketplace architecture with live blockchain indexer and PostgreSQL database",
+  },
+  {
+    num: "05",
+    title: "DeFi Stablecoin — Algorithmic Protocol",
+    sub: "Solidity · Next.js · Web3.js · Chainlink · TypeScript",
+    image: "/proj-incharge.svg",
+    imageAlt: "DeFi Stablecoin: Solidity smart contracts with Chainlink price feeds, collateral management, and liquidation engine",
+    metrics: [
+      { value: "2 months", label: "Duration" },
+      { value: "Full-stack", label: "UI + Smart Contracts" },
+      { value: "$500K+", label: "TVL (testnet)" },
+    ],
+    summary:
+      "Built a decentralized stablecoin protocol with algorithmic stability mechanisms, over-collateralization, and automated liquidation. Integrated Chainlink price feeds for accurate on-chain valuations, developed mint/burn mechanics with collateral management, and created a comprehensive admin dashboard. Extensive testing covered edge cases and attack vectors — $500K+ in total value locked during the testnet phase.",
+    tags: ["Solidity", "Next.js", "Web3.js", "Chainlink", "TypeScript"],
+    diagram: `graph LR
+  U[User] --> UI[Next.js dApp]
+  UI --> SC[Stablecoin Contract]
+  SC --> ORACLE[Chainlink Price Feed]
+  SC --> COL[Collateral Manager]
+  COL --> LIQ[Liquidation Engine]
+  SC:::hot
+  classDef hot fill:#B6FF3C,stroke:#B6FF3C,color:#080B11;`,
+    diagramLabel: "DeFi Stablecoin protocol architecture with Chainlink oracle and liquidation engine",
+  },
 ];
 
 export function Work() {

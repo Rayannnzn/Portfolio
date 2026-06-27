@@ -32,7 +32,7 @@ export function Hero() {
               className="mono mb-5 text-xs tracking-[0.25em] uppercase"
               style={{ color: "var(--signal)" }}
             >
-              // FULL STACK ENGINEER - REACT · NODE.JS · NEXT.JS
+              // SENIOR FULL STACK ENGINEER · BLOCKCHAIN DEVELOPER · WEB3 ARCHITECT
             </motion.p>
 
             <motion.h1
@@ -54,9 +54,9 @@ export function Hero() {
               className="mt-6 max-w-lg text-base md:text-lg leading-relaxed"
               style={{ color: "var(--text-muted)" }}
             >
-              I design and build full-stack web applications and blockchain systems that operate at scale from pixel precise React and Next.js frontends to robust Node.js backends, production-grade APIs, and PostgreSQL databases engineered for real traffic..
+              I help teams design, build, and scale full-stack web products from early architecture to production systems that handle real traffic and real users.
               <br />
-              Focused on clean architecture, Web3 integrations, and end-to-end product ownership, I help teams launch and grow through fast, secure, and maintainable technology including full-stack DeFi platforms, SaaS products, and smart contract-powered applications..
+              Focused on end-to-end product ownership and clean engineering, I turn complex requirements into fast, secure, and maintainable solutions spanning SaaS platforms, DeFi applications, and API-driven products built for growth.
             </motion.p>
 
             <motion.div

@@ -5,14 +5,20 @@ const GROUPS = [
   {
     label: "Languages",
     tags: [
-      "TypeScript", "JavaScript", "Solidity", "SQL", "HTML", "CSS",
+      "TypeScript", "JavaScript", "Solidity", "Rust", "SQL", "HTML", "CSS",
     ],
   },
   {
     label: "Frameworks & Libraries",
     tags: [
       "React.js", "Next.js", "Node.js", "Express.js", "Tailwind CSS",
-      "shadcn/ui", "Ethers.js", "Web3.js", "Prisma",
+      "shadcn/ui", "Ethers.js", "Web3.js", "Wagmi", "Anchor", "Prisma",
+    ],
+  },
+  {
+    label: "Blockchain & Web3",
+    tags: [
+      "Solana", "Chainlink", "EVM", "Smart Contracts", "Devnet / Testnet",
     ],
   },
   {
